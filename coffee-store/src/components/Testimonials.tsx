@@ -4,6 +4,19 @@ import { useState, useEffect } from 'react';
 import { Star} from 'lucide-react'
 import { Card, CardContent } from './CardComponent';
 import Cappucchino from '../assets/test1capp.avif'
+import Avatar from '../assets/test1avat.avif'
+import Avatar2 from '../assets/test1avat2.avif'
+import Avatar3 from '../assets/test1avat3.avif'
+import femAvatr1 from '../assets/test1avatfem1.avif';
+import femAvatr2 from '../assets/test1avatfem2.avif';
+import femAvatr3 from '../assets/test1avatfem3.avif';
+import femAvatr4 from '../assets/test1avatfem4.avif';
+import VanillaBean from '../assets/vanillabean.avif';
+import ChocoDelight from '../assets/chocodelight.avif';
+import Expresso from '../assets/expresso.avif'
+import RedVelvet from '../assets/redvelvet.avif'
+import Croissants from '../assets/Croissants.avif';
+import Cookies from '../assets/Cookies.avif'
 
 interface testimonial {
     id:number,
@@ -30,7 +43,7 @@ const Testimonials = () => {
       itemOrdered: "Cappuccino Classic",
       itemImage: Cappucchino,
       quote: "The best coffee in the city! The atmosphere is perfect for working and the staff is incredibly friendly.",
-      avatar: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      avatar: femAvatr1
     },
     {
       id: 2,
@@ -39,9 +52,9 @@ const Testimonials = () => {
       rating: 4,
       date: "2025-06-1",
       itemOrdered: "Chocolate Delight",
-      itemImage: "../assets/test1capp.avif",
+      itemImage: ChocoDelight,
       quote: "Absolutely divine cake! Every bite was a piece of heaven. Will definitely be back for more.",
-      avatar: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      avatar: femAvatr2
     },
         {
       id: 3,
@@ -50,9 +63,9 @@ const Testimonials = () => {
       rating: 5,
       date: "2025-06-10",
       itemOrdered: "Vanilla Bean Shake",
-      itemImage: "../assets/test1capp.avif",
+      itemImage: VanillaBean,
       quote: "Creamy, rich, and perfectly sweet. This shake brings back childhood memories in the best way possible.",
-      avatar: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      avatar: femAvatr3
     },
         {
       id: 4,
@@ -61,9 +74,9 @@ const Testimonials = () => {
       rating: 5,
       date: "2025-06-5",
       itemOrdered: "Espresso Perfecto",
-      itemImage: "../assets/test1capp.avif",
+      itemImage: Expresso,
       quote: "Perfect espresso shot every time. The baristas here are true artists and masters of their craft.",
-      avatar: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      avatar: Avatar
     },
         {
       id: 5,
@@ -72,9 +85,31 @@ const Testimonials = () => {
       rating: 4,
       date: "2025-06-10",
       itemOrdered: "Red Velvet",
-      itemImage: "../assets/test1capp.avif",
+      itemImage: RedVelvet,
       quote: "The red velvet cake here is legendary! Moist, flavorful, and the cream cheese frosting is perfect.",
-      avatar: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+      avatar: Avatar2
+    },
+            {
+      id: 6,
+      name: "Rohit Singh",
+      location: "WestEnd",
+      rating: 5,
+      date: "2025-06-8",
+      itemOrdered: "Croissants",
+      itemImage: Croissants,
+      quote: "The croissants were perfectly flaky, buttery, and melted in my mouth – pure bliss!",
+      avatar: Avatar3
+    },
+            {
+      id: 7,
+      name: "Priya Verma",
+      location: "WestEnd",
+      rating: 4,
+      date: "2025-06-20",
+      itemOrdered: "Cookies",
+      itemImage: Cookies,
+      quote: "Irresistibly chewy cookies with rich chocolate chunks – an absolute must-try treat!",
+      avatar: femAvatr4
     },
 ]
 
@@ -105,7 +140,7 @@ const Testimonials = () => {
         starElements.push(
             <Star 
             key={i}
-            className={StarColor}
+            className={StarClassName}
             />
         )
     }
@@ -128,11 +163,15 @@ const Testimonials = () => {
 
             {/*Testimonials Carousel */}
             <div className='relative overflow-hidden'>
-                <div>
+                <div
+                className='flex transition-transform duration-500 ease-in-out'
+                style={{ transform: `translateX(-${currentIndex * (100 / Math.min(testimonials.length, 3))}%)` }}
+                >
                     {testimonials.map((testimonial) => (
-                        <div key={testimonial.id}>
-                            <Card>
-                                <CardContent>
+                        <div key={testimonial.id}
+                        className='w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3'>
+                            <Card className='h-full bg-white border-yellow-200 hover:shadow-xl transform-all duration-300 group '>
+                                <CardContent className='p-6'>
                                     {/*Header with avatar and info */}
                                     <div className='flex items-center p-4'>
                                         <img 
@@ -175,7 +214,18 @@ const Testimonials = () => {
                     }
                 </div>
             </div>
-
+              {/* Dots indicator */}
+              <div className="flex justify-center mt-8 space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentIndex ? 'bg-yellow-600' : 'bg-yellow-300 hover:bg-yellow-400'
+                    }`}
+                  />
+                ))}
+              </div>
         </div>
     </section>
   )

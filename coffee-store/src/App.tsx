@@ -1,26 +1,21 @@
 import { useState } from 'react'
 
 import './App.css'
-import Navbar from './components/Navbar';
-import About from './components/About';
-import FAQs from './components/FAQs';
-import Footer from './components/Footer';
-import Contact from './components/Contact'
-import Testimonials from './components/Testimonials';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Index from './pages/Index'
+import NotFound from './pages/NotFound'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <p className='bg- font-white'>
-        Hey this i Zia</p>
-        {/*<Navbar />*/}
-        <About />
-        <Testimonials />
-        <FAQs />
-        <Contact />
-        <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Index />}/>
+        <Route path='*' element={<NotFound />}/>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
