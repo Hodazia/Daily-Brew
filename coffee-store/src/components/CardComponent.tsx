@@ -18,6 +18,20 @@ interface CardContentProps extends React.HTMLAttributes<HTMLDivElement>
     className?:string;
 }
 
+// interface for CardHeader Props
+interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement>
+{
+    className?:string;
+}
+
+// interface for CardTitle Props
+interface CardTitleProps extends React.HTMLAttributes<HTMLDivElement>
+{
+    className?:string;
+}
+
+
+
 // now write the Card component
 export const Card: React.FC<CardProps> = ({
     className,
@@ -47,6 +61,36 @@ export const CardContent: React.FC<CardContentProps> = ({
         {...restProps} // Apply any other HTML properties here
         >
         {children} {/* This is where the content inside the CardContent goes */}
+        </div>
+    )
+}
+
+export const CardHeader: React.FC<CardHeaderProps> = ({
+    className,
+    children,
+    ...restProps
+}) => {
+    return (
+        <div
+        className={`flex flex-col space-y-1.5 p-6 ${className || ''}`}
+        {...restProps}
+        >
+            {children}
+        </div>
+    )
+}
+
+export const CardTitle: React.FC<CardTitleProps> = ({
+    className,
+    children,
+    ...restProps
+}) => {
+    return (
+        <div
+        className={`text-2xl font-semibold text-yellow-500 ${className || ''}`}
+        {...restProps}
+        >
+            {children}
         </div>
     )
 }
