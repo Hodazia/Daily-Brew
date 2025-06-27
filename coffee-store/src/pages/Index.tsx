@@ -11,7 +11,7 @@ const Index = () => {
     return (
 
     <>
-        {/*<Navbar />*/}
+        <Navbar />
         <Hero />
         <About />
         <Items />
