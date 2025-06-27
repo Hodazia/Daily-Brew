@@ -34,7 +34,7 @@ const Navbar = () => {
         { name: 'About Us', action: () => ScrolltoSection('about')},
         { name: 'Items', action: () => ScrolltoSection('items')},
         { name: 'Coffee Quiz', action: () => NavigatetoPath('coffee-quiz')},
-        { name: 'Daily Specials', action: () => ScrolltoSection('da')},
+        /*{ name: 'Daily Specials', action: () => ScrolltoSection('da')},*/
         { name: 'Testimonials', action: () => ScrolltoSection('testimonials')},
         { name: 'FAQs', action: () => ScrolltoSection('faqs')},
         { name: 'Contact Us', action: () => ScrolltoSection('contact')}
@@ -53,7 +53,7 @@ const Navbar = () => {
                 {/* Logo  */}
                 <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate('/')}>
                     <Coffee className="h-8 w-8 text-yellow-600" />
-                    <span className="text-xl font-bold text-yellow-800 font-serif">Café Vista</span>
+                    <span className="text-xl font-bold text-yellow-800 font-serif">Daily Brew</span>
                 </div>
 
                           {/* Desktop Navigation */}
