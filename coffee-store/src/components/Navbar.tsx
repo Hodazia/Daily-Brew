@@ -1,13 +1,21 @@
 import { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import { Menu, X, Coffee} from 'lucide-react'
+import { useScroll, useTransform } from "framer-motion";
 
 const Navbar = () => {
 
     const [isMenuopen,setismenuopen] = useState(false);
+    const [scrolled,setscrolled] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
+    const scrollY = useScroll();
 
+    const backgroundColor = useTransform(
+        scrollY,
+        [0,100],
+        ["rgba(252,248,242,)","rgba(252,248,242,0.98)"]
+    )
     const ScrolltoSection = (sectionId:string) => {
         if(location.pathname !== '/')
         {

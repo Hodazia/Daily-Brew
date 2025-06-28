@@ -16,7 +16,8 @@ import ChocoDelight from '../assets/chocodelight.avif';
 import Expresso from '../assets/expresso.avif'
 import RedVelvet from '../assets/redvelvet.avif'
 import Croissants from '../assets/Croissants.avif';
-import Cookies from '../assets/Cookies.avif'
+import Cookies from '../assets/Cookies.avif';
+import { motion,  AnimatePresence } from 'framer-motion';
 
 interface testimonial {
     id:number,
@@ -138,15 +139,81 @@ const Testimonials = () => {
 
         const StarClassName = `w-4 h-4 ${StarColor}`
         starElements.push(
-            <Star 
+          <motion.div
             key={i}
-            className={StarClassName}
-            />
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ 
+              delay: i * 0.1, 
+              type: "spring" as const,
+              damping: 15,
+              stiffness: 200
+            }}
+            whileHover={{ 
+              scale: 1.2,
+              rotate: 360,
+              transition: { duration: 0.3 }
+            }}
+            >
+              <Star 
+              key={i}
+              className={StarClassName}
+              />
+            </motion.div>
         )
     }
     return starElements
   }
 
+  const cardVariants = {
+    enter: {
+      X:1000,
+      opacity:0,
+      scale:0.8,
+      rotateY:-90
+    },
+        center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      rotateY: 0,
+      transition: {
+        type: "spring" as const,
+        damping: 25,
+        stiffness: 120,
+        duration: 0.8
+      }
+    },
+    exit: {
+      x: -1000,
+      opacity: 0,
+      scale: 0.8,
+      rotateY: 90,
+      transition: {
+        duration: 0.5
+    }
+  }
+
+  const b = {
+    initial: { 
+      background: "linear-gradient(135deg, #f5f5dc 0%, #deb887 100%)" 
+    },
+    animate: { 
+      background: [
+        "linear-gradient(135deg, #f5f5dc 0%, #deb887 100%)",
+        "linear-gradient(135deg, #deb887 0%, #f5f5dc 100%)",
+        "linear-gradient(135deg, #f5f5dc 0%, #deb887 100%)"
+      ],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  }
+
+
+  }
   return (
     <section id="testimonials">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

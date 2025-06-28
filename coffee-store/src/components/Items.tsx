@@ -16,7 +16,7 @@ import Croissant from '../assets/Items/snacks/croissant.avif';
 import Blueberry from '../assets/Items/snacks/blueberrymuffin.avif';
 import Bar from '../assets/Items/snacks/granolabar.avif';
 import bagelcream from '../assets/Items/snacks/bagelcream.avif'
-
+import { motion, AnimatePresence } from "framer-motion";
 
 // define an interface for the card elements img will be wrapped inside a card
 interface Product {
@@ -161,23 +161,65 @@ const Items =() =>{
     { id: 'snacks', label: 'Snacks', icon: '🥐' }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { y: 50, opacity: 0, scale: 0.9 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 100
+      }
+    }
+  };
+
   return (
     <section id="items" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <motion.div 
+        className="text-center mb-12"
+        initial={{ opacity:0, y:-50}}
+        whileInView={{ opacity:1,y:0}}
+        viewport={{ once:true}}
+        transition={{ duration: 0.6}}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-yellow-900 mb-4 font-serif">
             Our Delicious Menu
           </h2>
-          <div className="w-20 h-1 bg-yellow-400 rounded-full mx-auto mb-6"></div>
+          <motion.div 
+          className="w-20 h-1 bg-yellow-400 rounded-full mx-auto mb-6"
+          initial={{ width: 0}}
+          whileInView={{ width: 98 }}
+          viewport={{ once:true}}
+          transition={{ delay:0.3, duration: 0.6}}
+          ></motion.div>
           <p className="text-lg text-yellow-600 max-w-2xl mx-auto">
             Discover our carefully crafted selection of premium coffees, artisanal cakes, creamy shakes, and fresh snacks.
           </p>
-        </div>
+        </motion.div>
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <motion.div 
+        className="flex flex-wrap justify-center gap-4 mb-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        >
           {tabs.map((tab) => (
-            <button
+            <motion.button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center space-x-2 ${
@@ -185,12 +227,18 @@ const Items =() =>{
                   ? 'bg-yellow-600 text-white shadow-lg'
                   : 'bg-yellow-100 text-yellow-700 hover:bg-yellow-200'
               }`}
+              whileHover={{ scale:1.05}}
+              whileTap={{ scale: 0.95}}
+              layout
             >
-              <span className="text-lg">{tab.icon}</span>
+              <motion.span 
+              animate={{ rotate: activeTab === tab.id ? [0, 15, -15, 0] : 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-lg">{tab.icon}</motion.span>
               <span>{tab.label}</span>
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
         {/*products grid */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
