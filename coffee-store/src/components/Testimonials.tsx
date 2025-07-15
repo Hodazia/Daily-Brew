@@ -163,7 +163,7 @@ const cardVariants = {
     scale: 1,
     rotateY: 0,
     transition: {
-      type: "spring" as const,
+      type: 'spring' as const,
       damping: 25,
       stiffness: 120,
       duration: 0.8
@@ -193,7 +193,7 @@ const backgroundVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: [0.6, 0.05, -0.01, 0.9]
+      ease: 'easeInOut' as const
     }
   }
 };

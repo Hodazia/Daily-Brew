@@ -28,7 +28,7 @@ const Hero = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
+        type: 'spring' as const,
         damping: 12,
         stiffness: 100
       }
@@ -42,7 +42,7 @@ const Hero = () => {
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: 'easeInOut' as const // use valid string
       }
     }
   };
@@ -172,8 +172,8 @@ const Hero = () => {
           rotate: [0, 360],
         }}
         transition={{
-          y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-          rotate: { duration: 8, repeat: Infinity, ease: "linear" }
+          y: { duration: 3, repeat: Infinity, ease: 'easeInOut' as const },
+          rotate: { duration: 8, repeat: Infinity, ease: 'linear' as const }
         }}
       >
         <div className="w-6 h-6 bg-gold rounded-full 

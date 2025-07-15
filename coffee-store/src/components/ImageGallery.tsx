@@ -95,7 +95,7 @@ const ImageGallery = () => {
           opacity: 1,
           scale: 1,
           transition: {
-            type: "spring",
+            type: 'spring' as const,
             damping: 20,
             stiffness: 100
           }
@@ -119,7 +119,7 @@ const ImageGallery = () => {
             initial={{ scale: 0.8 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, type: "spring", damping: 15 }}
+            transition={{ delay: 0.2, type: 'spring' as const, damping: 15 }}
           >
             Gallery
           </motion.h2>
@@ -157,7 +157,7 @@ const ImageGallery = () => {
                 scale: 1.05,
                 boxShadow: "0 15px 30px rgba(0,0,0,0.2)"
               }}
-              transition={{ type: "spring", damping: 20 }}
+              transition={{ type: 'spring' as const, damping: 20 }}
               className="relative cursor-pointer group overflow-hidden rounded-xl"
               onClick={() => openLightbox(index)}
             >
