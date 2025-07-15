@@ -11,13 +11,6 @@ const Navbar = () => {
   const location = useLocation();
   const { scrollY } = useScroll();
   
-  // Transform opacity based on scroll position
-  const navOpacity = useTransform(
-    scrollY,
-    [0, 100, 200],
-    [0.95, 0.85, 0.75]
-  );
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -42,11 +35,6 @@ const Navbar = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    setIsMenuOpen(false);
-  };
-
-  const navigateToPage = (path: string) => {
-    navigate(path);
     setIsMenuOpen(false);
   };
 

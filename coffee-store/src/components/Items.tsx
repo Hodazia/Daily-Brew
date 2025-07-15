@@ -171,20 +171,6 @@ const Items =() =>{
     }
   };
 
-  const cardVariants = {
-    hidden: { y: 50, opacity: 0, scale: 0.9 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        damping: 15,
-        stiffness: 100
-      }
-    }
-  };
-
   return (
     <section id="items" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

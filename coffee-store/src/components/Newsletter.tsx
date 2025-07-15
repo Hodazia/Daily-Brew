@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { Card, CardContent, CardHeader, CardTitle} from "./CardComponent";
+import { useState } from "react"
+import { Card, CardContent } from "./CardComponent";
 import { Coffee, Mail, Check } from "lucide-react";
 import { Button } from "./Button";
 import { Input } from "./ui/Input";
