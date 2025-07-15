@@ -220,7 +220,8 @@ return (
         }}
       >
         <motion.h2 
-          className="text-3xl md:text-4xl font-bold text-coffee-900 mb-4 font-serif"
+          className="text-3xl md:text-4xl 
+          font-bold text-amber-950 mb-4 font-serif"
           initial={{ scale: 0.5, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -234,14 +235,14 @@ return (
           What Our Customers Say
         </motion.h2>
         <motion.div 
-          className="w-20 h-1 bg-gold rounded-full mx-auto mb-6"
+          className="w-20 h-1 bg-amber-400 rounded-full mx-auto mb-6"
           initial={{ width: 0, opacity: 0 }}
           whileInView={{ width: 80, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 1.2 }}
         />
         <motion.p 
-          className="text-lg text-coffee-600 max-w-2xl mx-auto"
+          className="text-lg text-amber-800 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -270,7 +271,8 @@ return (
               }}
               transition={{ type: "spring" as const, damping: 20 }}
             >
-              <Card className="bg-white border-coffee-200 shadow-2xl overflow-hidden">
+              <Card className="bg-white 
+              border-amber-200 shadow-2xl overflow-hidden">
                 <CardContent className="p-8">
                   {/* Header with avatar and info */}
                   <motion.div 
@@ -292,7 +294,7 @@ return (
                     />
                     <div className="flex-1">
                       <motion.h4 
-                        className="font-semibold text-coffee-900 text-lg"
+                        className="font-semibold text-amber-950 text-lg"
                         initial={{ x: -20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -300,7 +302,7 @@ return (
                         {testimonials[currentIndex].name}
                       </motion.h4>
                       <motion.p 
-                        className="text-coffee-600"
+                        className="text-amber-800"
                         initial={{ x: -20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ delay: 0.5 }}
@@ -308,7 +310,7 @@ return (
                         {testimonials[currentIndex].location}
                       </motion.p>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right text-amber-400">
                       <motion.div 
                         className="flex justify-end mb-2"
                         initial={{ scale: 0 }}
@@ -318,7 +320,7 @@ return (
                         {renderStars(testimonials[currentIndex].rating)}
                       </motion.div>
                       <motion.p 
-                        className="text-sm text-coffee-500"
+                        className="text-sm text-amber-800"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7 }}
@@ -330,22 +332,23 @@ return (
 
                   {/* Quote */}
                   <motion.blockquote 
-                    className="text-coffee-700 mb-6 italic leading-relaxed text-lg text-center relative"
+                    className="text-amber-100 mb-6 italic 
+                    leading-relaxed text-lg text-center relative"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                   >
                     <motion.span
-                      className="text-6xl text-gold absolute -top-4 -left-4 opacity-30"
+                      className="text-6xl text-amber-100 absolute -top-4 -left-4 opacity-30"
                       initial={{ scale: 0, rotate: -90 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: 0.8, type: "spring" as const }}
                     >
                       "
                     </motion.span>
-                    {testimonials[currentIndex].quote}
+                    <div className='text-amber-800'>{testimonials[currentIndex].quote}</div>
                     <motion.span
-                      className="text-6xl text-gold absolute -bottom-8 -right-4 opacity-30"
+                      className="text-6xl text-amber-100 absolute -bottom-8 -right-4 opacity-30"
                       initial={{ scale: 0, rotate: 90 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ delay: 0.9, type: "spring" as const }}
@@ -356,7 +359,7 @@ return (
 
                   {/* Item ordered */}
                   <motion.div 
-                    className="flex items-center justify-center p-4 bg-coffee-50 rounded-lg"
+                    className="flex items-center justify-center p-4 bg-orange-100 rounded-lg"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.6 }}
@@ -386,7 +389,7 @@ return (
                         Ordered:
                       </motion.p>
                       <motion.p 
-                        className="text-coffee-600"
+                        className="text-amber-800"
                         initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.9 }}

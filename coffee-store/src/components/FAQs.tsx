@@ -113,14 +113,12 @@ const FAQs = () => {
                 Frequently Asked Questions
                 </motion.h2>
                 <motion.div 
-                className="w-20 h-1 text-amber-500 rounded-full mx-auto mb-6"
-                initial={{ width:0}}
-                whileInView={{ width: 80}}
-                viewport={{ once:true}}
-                transition={{ delay:0.4 , duration: 0.8}}
-                >
-
-                </motion.div>
+                    className="w-20 h-1 bg-amber-400 rounded-full mx-auto mb-6"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: 80 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                />
                 <motion.p 
                 className="text-lg text-amber-800 max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
@@ -206,7 +204,7 @@ const FAQs = () => {
                                         animate={{ y: 0 }}
                                         transition={{ delay: 0.2 }}
                                         >
-                                            <p className="text-coffee-700 leading-relaxed">
+                                            <p className="text-amber-900 leading-relaxed">
                                                 {faq.answer}
                                             </p>
                                         </motion.div>

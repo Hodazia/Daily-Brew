@@ -118,8 +118,8 @@ const Contact = () => {
                                     transition={{ delay: 0.2}}
                                     >
                                         <h3 className="font-semibold text-amber-950 mb-1">Visit Us</h3>
-                                        <p className="text-amber-800">The Wall Street, Downtown</p>
-                                        <p className="text-amber-800">New York, New York</p>
+                                        <p className="text-amber-800">The Cannaught Place</p>
+                                        <p className="text-amber-800">New Delhi,Delhi</p>
                                     </motion.div>    
                                 </div>
                             </CardContent>
@@ -252,23 +252,24 @@ const Contact = () => {
                              mx-auto mb-3" />
                             <h3 className="text-xl font-semibold 
                             text-amber-950 mb-2">Find Us Easily</h3>
-                            <p className="text-amber-800 mb-4">Located in the heart of downtown, just 2 blocks from Central Station</p>
+                            <p className="text-amber-800 mb-4">Located in the heart of Delhi,
+                                 just 2 blocks from Cannaught Place</p>
                             </motion.div>
                             
                             {/* Google Maps Embed */}
                             <div className="w-full h-64 rounded-lg 
                             shadow-inner overflow-hidden">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0977!2d-74.00597!3d40.71278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316ca6b7b1%3A0x3c9b8d4e4f2b8d4e!2s123%20Coffee%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1639584921234!5m2!1sen!2sus"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Café Vista Location"
-                                className="rounded-lg"
-                            />
+                            <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224193.2026046709!2d76.97211924146275!3d28.599213092610064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd35c804a1a1%3A0xe374c47e935b9c3a!2sCafe%20Delhi%20Heights!5e0!3m2!1sen!2sin!4v1752587481049!5m2!1sen!2sin" 
+                            width="100%"
+                             height="100%" 
+                            style={{ border: 0}}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade" 
+                            title="Café Vista Location"
+                            className="rounded-lg"/>
+                            
                             </div>
                         </div>
                         </CardContent>

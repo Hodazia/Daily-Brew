@@ -48,7 +48,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen 
+    flex items-center justify-center overflow-hidden">
       {/* Background with parallax effect */}
       <motion.div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -63,18 +64,21 @@ const Hero = () => {
       {/* Floating coffee beans */}
 
       <motion.div
-        className="absolute top-20 left-10 w-4 h-4 bg-gold rounded-full opacity-30"
+        className="absolute top-20 left-10 w-4 h-4 bg-amber-400 
+        rounded-full opacity-30"
         variants={floatingVariants}
         animate="animate"
       />
       <motion.div
-        className="absolute top-40 right-20 w-3 h-3 bg-gold rounded-full opacity-40"
+        className="absolute top-40 right-20 w-3 h-3 bg-amber-400 
+        rounded-full opacity-40"
         variants={floatingVariants}
         animate="animate"
         transition={{ delay: 1 }}
       />
       <motion.div
-        className="absolute bottom-40 left-20 w-5 h-5 bg-gold rounded-full opacity-20"
+        className="absolute bottom-40 left-20 w-5 h-5 bg-amber-400 
+        rounded-full opacity-20"
         variants={floatingVariants}
         animate="animate"
         transition={{ delay: 2 }}
@@ -82,35 +86,40 @@ const Hero = () => {
       
       {/* Content */}
       <motion.div 
-        className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="relative z-10 text-center text-white px-4 sm:px-6 
+        lg:px-8 max-w-4xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1 
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-serif"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold
+           mb-6 font-serif text-orange-300"
           variants={itemVariants}
         >
           Welcome to
           <motion.span 
-            className="block text-gold"
+            className="block text-orange-100"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.8, type: "spring", damping: 10, stiffness: 100 }}
           >
-            Café Vista
+            Daily Brew
           </motion.span>
         </motion.h1>
         
         <motion.p 
-          className="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl 
+          lg:text-2xl mb-8 max-w-2xl mx-auto
+          text-orange-100 leading-relaxed"
           variants={itemVariants}
         >
           Experience the perfect blend of premium coffee, artisanal pastries, and warm hospitality in the heart of the city.
         </motion.p>
         
         <motion.div 
-          className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
+          className="space-y-4 sm:space-y-0 sm:space-x-4 
+          sm:flex sm:justify-center"
           variants={itemVariants}
         >
           <motion.div
@@ -120,7 +129,10 @@ const Hero = () => {
             <Button 
               onClick={scrollToItems}
               size="lg"
-              className="bg-gold hover:bg-gold/90 text-coffee-900 font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
+              className="bg-orange-400 hover:bg-white
+              hover:text-orange-400 text-orange-100 
+              font-semibold px-8 py-3 rounded-full
+              transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               Explore Our Menu
               <motion.div
@@ -140,7 +152,10 @@ const Hero = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-coffee-900 font-semibold px-8 py-3 rounded-full transition-all duration-300"
+              className="border-2 bg-orange-400 border-white text-orange-100 
+              hover:bg-white hover:text-orange-400 
+              font-semibold px-8 py-3 rounded-full transition-all
+               duration-300"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Learn More
@@ -161,7 +176,8 @@ const Hero = () => {
           rotate: { duration: 8, repeat: Infinity, ease: "linear" }
         }}
       >
-        <div className="w-6 h-6 bg-gold rounded-full opacity-70 shadow-lg"></div>
+        <div className="w-6 h-6 bg-gold rounded-full 
+        opacity-70 shadow-lg"></div>
       </motion.div>
     </section>
   );

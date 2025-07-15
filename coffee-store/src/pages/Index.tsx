@@ -7,6 +7,7 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Items from "../components/Items"
 import Newsletter from "../components/Newsletter"
+import ImageGallery from "../components/ImageGallery"
 
 const Index = () => {
     return (
@@ -16,6 +17,7 @@ const Index = () => {
         <Hero />
         <About />
         <Items />
+        <ImageGallery />
         <Testimonials />
         <FAQs />
         <Newsletter />

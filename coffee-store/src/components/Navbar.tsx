@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X, Coffee } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -10,10 +11,11 @@ const Navbar = () => {
   const location = useLocation();
   const { scrollY } = useScroll();
   
-  const backgroundColor = useTransform(
+  // Transform opacity based on scroll position
+  const navOpacity = useTransform(
     scrollY,
-    [0, 100],
-    ["rgba(252, 248, 242, 0.95)", "rgba(252, 248, 242, 0.98)"]
+    [0, 100, 200],
+    [0.95, 0.85, 0.75]
   );
 
   useEffect(() => {
@@ -48,6 +50,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+
   const navItems = [
     { name: 'Home', action: () => scrollToSection('hero') },
     { name: 'About Us', action: () => scrollToSection('about') },
@@ -62,12 +65,17 @@ const Navbar = () => {
 
   return (
     <motion.nav 
-      className={`fixed top-0 left-0 right-0 z-50 
-        backdrop-blur-sm border-b border-amber-200
-         transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 rounded-full backdrop-blur-sm
+         border-b border-coffee-200 transition-all duration-300 ${
         scrolled ? 'shadow-lg py-2' : 'shadow-sm py-0'
       }`}
-      style={{ backgroundColor }}
+      style={{ 
+        backgroundColor: useTransform(
+          scrollY,
+          [0, 100, 200],
+          ["rgba(252, 248, 242, 0.95)", "rgba(252, 248, 242, 0.85)", "rgba(252, 248, 242, 0.75)"]
+        )
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -84,7 +92,7 @@ const Navbar = () => {
             >
               <Coffee className="h-8 w-8 text-amber-800" />
             </motion.div>
-            <span className="text-xl font-bold text-amber-800 font-serif">Café Vista</span>
+            <span className="text-xl font-bold text-amber-950 font-serif">Daily Brew</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -93,7 +101,9 @@ const Navbar = () => {
               <motion.button
                 key={index}
                 onClick={item.action}
-                className="text-amber-700 hover:text-amber-900 font-medium transition-colors duration-200 relative group text-md"
+                className="text-amber-800 hover:text-amber-900
+                 font-medium transition-colors duration-200 
+                 relative group text-sm"
                 whileHover={{ y: -2 }}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,15 +124,16 @@ const Navbar = () => {
           <div className="lg:hidden">
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-amber-700 hover:text-amber-900 
-              transition-colors duration-200"
+              className="text-amber-800 hover:text-amber-900
+               transition-colors duration-200"
               whileTap={{ scale: 0.9 }}
             >
               <motion.div
                 animate={{ rotate: isMenuOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {isMenuOpen ? <X className="h-6 w-6" />
+                 : <Menu className="h-6 w-6" />}
               </motion.div>
             </motion.button>
           </div>
@@ -136,16 +147,17 @@ const Navbar = () => {
             opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="lg:hidden bg-cream border-t border-amber-200 
-          overflow-hidden"
+          className="lg:hidden bg-cream border-t border-amber-800
+           overflow-hidden"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 max-h-96 overflow-y-auto">
             {navItems.map((item, index) => (
               <motion.button
                 key={index}
                 onClick={item.action}
-                className="block w-full text-left px-3 py-2 text-amber-700 hover:text-amber-900 
-                hover:bg-amber-100 rounded-md transition-colors duration-200"
+                className="block w-full text-left px-3 py-2 text-amber-800
+                 hover:text-amber-900 hover:bg-orange-100
+                 rounded-md transition-colors duration-200"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.05 }}
