@@ -193,7 +193,7 @@ const backgroundVariants = {
     transition: {
       duration: 3,
       repeat: Infinity,
-      ease: "linear"
+      ease: [0.6, 0.05, -0.01, 0.9]
     }
   }
 };

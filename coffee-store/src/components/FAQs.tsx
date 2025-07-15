@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { Card,CardContent } from './CardComponent';
-import { motion, AnimatePresence, animate, rgba } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 // define an interface for faq's like accordion, where once u click on it , a new p will be generated it will be a toggle state
 interface faq {
     id:number,

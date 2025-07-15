@@ -7,7 +7,7 @@ import coffeemul3 from '../assets/GALLERY/coffeemul3.avif'
 import interior2 from '../assets/GALLERY/interior2.avif'
 import shake from '../assets/GALLERY/shake.avif'
 import coffeebeans from '../assets/GALLERY/coffee1.avif'
-import { motion, AnimatePresence} from "framer-motion"
+import { motion} from "framer-motion"
 
 // interface Img {
 //     img: Number | null
@@ -37,7 +37,7 @@ const ImageGallery = () => {
         },
         {
             id:4,
-            src:Interior,
+            src:interior2,
             alt:'Morning Coffee Setup',
             category:'Coffee'
         },

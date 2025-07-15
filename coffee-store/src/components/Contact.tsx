@@ -1,6 +1,6 @@
 import { MapPin , Phone, Clock, Mail } from "lucide-react"
 import { Card, CardContent } from "./CardComponent"
-import { motion, transform } from "framer-motion"
+import { motion} from "framer-motion"
 
 const Contact = () => {
     const containerVariants = {
@@ -31,14 +31,6 @@ const Contact = () => {
         }
     }
 
-    const iconVariants = {
-        initial:{scale:1, rotate:0},
-        hover:{
-            scale:1.1,
-            rotate:5,
-            transform:{ type: "string" as const, damping: 15}
-        }
-    }
 
     return (
         <section id="contact" className="py-20 bg-gradient-to-r from-rgba(252, 248, 242, 0.95) 

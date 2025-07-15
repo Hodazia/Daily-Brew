@@ -16,16 +16,8 @@ import Croissant from '../assets/Items/snacks/croissant.avif';
 import Blueberry from '../assets/Items/snacks/blueberrymuffin.avif';
 import Bar from '../assets/Items/snacks/granolabar.avif';
 import bagelcream from '../assets/Items/snacks/bagelcream.avif'
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 
-// define an interface for the card elements img will be wrapped inside a card
-interface Product {
-    id:number,
-    name:string,
-    description:string,
-    price:string,
-    image:string
-}
 
 const Items =() =>{
 
@@ -161,15 +153,6 @@ const Items =() =>{
     { id: 'snacks', label: 'Snacks', icon: '🥐' }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
 
   return (
     <section id="items" className="py-20 bg-white">
