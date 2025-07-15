@@ -103,7 +103,8 @@ const FAQs = () => {
                 transition={{ duration: 0.6 }}
                 >
                 <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-yellow-900 mb-4 font-serif"
+                className="text-3xl md:text-4xl font-bold text-amber-950 
+                mb-4 font-serif"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
@@ -112,7 +113,7 @@ const FAQs = () => {
                 Frequently Asked Questions
                 </motion.h2>
                 <motion.div 
-                className="w-20 h-1 text-yellow-500 rounded-full mx-auto mb-6"
+                className="w-20 h-1 text-amber-500 rounded-full mx-auto mb-6"
                 initial={{ width:0}}
                 whileInView={{ width: 80}}
                 viewport={{ once:true}}
@@ -121,7 +122,7 @@ const FAQs = () => {
 
                 </motion.div>
                 <motion.p 
-                className="text-lg text-yellow-200 max-w-2xl mx-auto"
+                className="text-lg text-amber-800 max-w-2xl mx-auto"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -149,15 +150,20 @@ const FAQs = () => {
                         }}
                         transition={{ type: "spring" as const, damping: 20 }}
             >
-                            <Card key={faq.id} className="border-coffee-200 hover:shadow-md transition-all duration-300">
+                            <Card key={faq.id} className="border-amber-200
+                             hover:shadow-md transition-all duration-300 
+                             bg-stone-50">
                             <CardContent className="p-0">
                                 <motion.button
                                 onClick={() => toggleFAQ(faq.id)}
-                                className="w-full p-6 text-left flex justify-between items-center hover:bg-coffee-50 transition-colors duration-300"
+                                className="w-full p-6 text-left
+                                 flex justify-between items-center 
+                                 hover:bg-coffee-50 transition-colors duration-300"
                                 whileHover={{ backgroundColor: "rgba(139,69,19,0.05)"}}
                                 whileTap={{scale:0.95}}
                                 >
-                                    <h3 className="font-semibold text-coffee-900 pr-4">
+                                    <h3 className="font-semibold 
+                                    text-amber-950 pr-4">
                                         {faq.question}
                                     </h3>
                                     <motion.div
@@ -215,7 +221,8 @@ const FAQs = () => {
                 </motion.div>
                 {/* Contact CTA */}
                 <motion.div 
-                    className="text-center mt-12 p-8 bg-yellow-50 rounded-2xl"
+                    className="text-center mt-12 p-8 
+                    bg-orange-100 rounded-2xl"
                     initial={{opacity:0, y:50}}
                     whileInView={{ opacity:1,y:0}}
                     viewport={{ once:true}}
@@ -226,7 +233,7 @@ const FAQs = () => {
                     }}
                     >
                     <motion.h3 
-                    className="text-xl font-semibold text-yellow-900 mb-2"
+                    className="text-xl font-semibold text-amber-950 mb-2"
                     initial={{ scale: 0.9 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
@@ -235,7 +242,7 @@ const FAQs = () => {
                         Still have questions?
                     </motion.h3>
                      <motion.p 
-                        className="text-coffee-600 mb-4"
+                        className="text-amber-800 mb-4"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
@@ -245,7 +252,9 @@ const FAQs = () => {
                     </motion.p>
                     <motion.button 
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="bg-coffee-600 text-white px-6 py-3 rounded-full hover:bg-coffee-700 transition-colors duration-300 font-medium"
+                        className="bg-amber-900
+                         text-white px-6 py-3 rounded-full 
+                         hover:bg-coffee-700 transition-colors duration-300 font-medium"
                         whileHover={{ 
                         scale: 1.05,
                         boxShadow: "0 8px 20px rgba(139, 69, 19, 0.3)"

@@ -41,7 +41,8 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="py-20 bg-yellow-200">
+        <section id="contact" className="py-20 bg-gradient-to-r from-rgba(252, 248, 242, 0.95) 
+        to-rgba(252, 248, 242, 0.98)">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <motion.div 
@@ -52,7 +53,8 @@ const Contact = () => {
                 transition={{duration: 0.6 }}
                 >
                     <motion.h2 
-                    className="text-3xl md:text-4xl font-bold text-yellow-900 mb-4 font-serif"
+                    className="text-3xl md:text-4xl font-bold text-amber-950 
+                    mb-4 font-serif"
                     initial={{ scale: 0.8 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
@@ -61,7 +63,7 @@ const Contact = () => {
                         Get in Touch
                     </motion.h2>
                     <motion.div 
-                    className="w-20 h-1 text-yellow-500 rounded-full mx-auto mb-6"
+                    className="w-20 h-1 text-amber-800 rounded-full mx-auto mb-6"
                     initial={{ width: 0 }}
                     whileInView={{ width: 80 }}
                     viewport={{ once: true }}
@@ -69,7 +71,7 @@ const Contact = () => {
 
                     </motion.div>
                     <motion.p 
-                    className="text-lg text-yellow-200 max-w-2xl mx-auto"
+                    className="text-lg text-amber-800 max-w-2xl mx-auto"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -93,11 +95,13 @@ const Contact = () => {
                             }}
                                 transition={{ type: "spring" as const, damping: 20 }}
                         >
-                        <Card className="border-yellow-200 hover:Shadow-lg transition-all duration-300">
-                            <CardContent>
+                        <Card className="border-amber-100 
+                        hover:shadow-lg transition-all duration-300">
+                            <CardContent className="p-6">
                                 <div className="flex items-center space-x-4">
                                     <motion.div 
-                                        className="bg-coffee-600 p-3 rounded-full"
+                                        className="bg-amber-800 p-3
+                                         rounded-full"
                                         initial={{scale:1, rotate:0}}
                                         whileHover={{
                                                     scale:1.1,
@@ -113,14 +117,14 @@ const Contact = () => {
                                     viewport={{ once:true}}
                                     transition={{ delay: 0.2}}
                                     >
-                                        <h3 className="font-semibold text-yellow-900 mb-1">Visit Us</h3>
-                                        <p className="text-yellow-600">The Wall Street, Downtown</p>
-                                        <p className="text-yellow-600">New York, New York</p>
+                                        <h3 className="font-semibold text-amber-950 mb-1">Visit Us</h3>
+                                        <p className="text-amber-800">The Wall Street, Downtown</p>
+                                        <p className="text-amber-800">New York, New York</p>
                                     </motion.div>    
                                 </div>
                             </CardContent>
                         </Card>
-                        </motion.div>.
+                        </motion.div>
 
                         <motion.div
                         className=""
@@ -130,11 +134,12 @@ const Contact = () => {
                         }}
                         transition={{ type: "spring" as const, damping: 20 }}
                         >
-                            <Card className="border-coffee-200 hover:shadow-lg transition-all duration-300">
+                            <Card className="border-amber-100 
+                             hover:shadow-lg transition-all duration-300">
                             <CardContent className="p-6">
                                 <div className="flex items-center space-x-4">
                                     <motion.div 
-                                    className="bg-coffee-600 p-3 rounded-full"
+                                    className="bg-amber-800 p-3 rounded-full"
                                     initial={{scale:1, rotate:0}}
                                     whileHover={{
                                                 scale:1.1,
@@ -149,9 +154,9 @@ const Contact = () => {
                                     whileInView={{ x: 0, opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.3 }}>
-                                        <h3 className="font-semibold text-coffee-900 mb-1">Call Us</h3>
-                                        <p className="text-coffee-600">(555) 123-CAFE</p>
-                                        <p className="text-coffee-600">(555) 123-2233</p>
+                                        <h3 className="font-semibold text-amber-950 mb-1">Call Us</h3>
+                                        <p className="text-amber-800">(555) 123-CAFE</p>
+                                        <p className="text-amber-800">(555) 123-2233</p>
                                     </motion.div>
                                 </div>
                             </CardContent>
@@ -165,11 +170,11 @@ const Contact = () => {
                             }}
                             transition={{ type: "spring" as const, damping: 20 }}
                         >
-                        <Card className="border-coffee-200 hover:shadow-lg transition-all duration-300">
+                        <Card className="border-amber-100 hover:shadow-lg transition-all duration-300">
                             <CardContent className="p-6">
                                 <div className="flex items-center space-x-4">
                                 <motion.div 
-                                className="bg-coffee-600 p-3 rounded-full"
+                                className="bg-amber-800 p-3 rounded-full"
                                 initial={{ x: -20, opacity: 0 }}
                                 whileInView={{ x: 0, opacity: 1 }}
                                 viewport={{ once: true }}
@@ -178,15 +183,16 @@ const Contact = () => {
                                     <Mail className="w-6 h-6 text-white" />
                                 </motion.div>
                                 <div>
-                                    <h3 className="font-semibold text-coffee-900 mb-1">Email Us</h3>
-                                    <p className="text-coffee-600">hello@cafevista.com</p>
-                                    <p className="text-coffee-600">orders@cafevista.com</p>
+                                    <h3 className="font-semibold text-amber-950 mb-1">Email Us</h3>
+                                    <p className="text-amber-800">hello@cafevista.com</p>
+                                    <p className="text-amber-800">orders@cafevista.com</p>
                                 </div>
                                 </div>
                             </CardContent>
                             </Card>
                             </motion.div>
 
+                            
                             <motion.div
                             whileHover={{ 
                                 scale: 1.03,
@@ -194,114 +200,140 @@ const Contact = () => {
                             }}
                             transition={{ type: "spring" as const, damping: 20 }}
                             >
-                        <Card className="border-coffee-200 hover:shadow-lg transition-all duration-300">
-                            <CardContent className="p-6">
-                                <div className="flex items-center space-x-4">
-                                <motion.div 
-                                initial={{scale:1, rotate:0}}
-                                whileHover={{
-                                            scale:1.1,
-                                            rotate:5,
-                                            }}
-                                transition={{ type: "spring" as const, damping: 20 }}
-                                className="bg-coffee-600 p-3 rounded-full">
-                                    <Clock className="w-6 h-6 text-white" />
-                                </motion.div>
-                                <motion.div
-                                initial={{ x: -20, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.5 }}>
-                                    <h3 className="font-semibold text-coffee-900 mb-1">Hours</h3>
-                                    <p className="text-coffee-600">Mon-Fri: 6:00 AM - 8:00 PM</p>
-                                    <p className="text-coffee-600">Sat-Sun: 7:00 AM - 9:00 PM</p>
-                                </motion.div>
-                                </div>
-                            </CardContent>
-                    </Card>
-                    </motion.div>
+                                <Card className="border-amber-100 
+                                hover:shadow-lg transition-all duration-300">
+                                    <CardContent className="p-6">
+                                        <div className="flex items-center space-x-4">
+                                        <motion.div 
+                                        initial={{scale:1, rotate:0}}
+                                        whileHover={{
+                                                    scale:1.1,
+                                                    rotate:5,
+                                                    }}
+                                        transition={{ type: "spring" as const, damping: 20 }}
+                                        className="bg-amber-800 p-3 rounded-full">
+                                            <Clock className="w-6 h-6 text-white" />
+                                        </motion.div>
+                                        <motion.div
+                                        initial={{ x: -20, opacity: 0 }}
+                                        whileInView={{ x: 0, opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: 0.5 }}>
+                                            <h3 className="font-semibold text-amber-950 mb-1">Hours</h3>
+                                            <p className="text-amber-800">Mon-Fri: 6:00 AM - 8:00 PM</p>
+                                            <p className="text-amber-800">Sat-Sun: 7:00 AM - 9:00 PM</p>
+                                        </motion.div>
+                                        </div>
+                                   </CardContent>
+                                </Card>
+                            </motion.div>
                     </motion.div>
                     {/* Map Placeholder / Additional Info */}
-                    <motion.div 
-                    whileHover={{ 
-                    scale: 1.02,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
-                     }}
-                    transition={{ type: "spring" as const, damping: 20 }}
-                    className="space-y-6">
-                        <Card className="border-coffee-200 h-64 flex items-center justify-center bg-gradient-to-br from-coffee-100 to-coffee-200">
-                        <CardContent className="text-center">
-                            <motion.div
-                                initial={{ scale: 0.8, opacity: 0 }}
-                                whileInView={{ scale: 1, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.3, type: "spring" as const, damping: 15 }}
-                                >
-                            <MapPin className="w-16 h-16 text-coffee-600 mx-auto mb-4" />
-                            <h3 className="text-xl font-semibold text-coffee-900 mb-2">Find Us Easily</h3>
-                            <p className="text-coffee-600">Located in the heart of downtown, just 2 blocks from Central Station</p>
-                            </motion.div>
-                        </CardContent>
-                        </Card>
-
-                <motion.div
+                            {/* Map and Additional Info */}
+                <motion.div className="space-y-6" variants={ItemVariants}>
+                    <motion.div
                     whileHover={{ 
                         scale: 1.02,
-                        boxShadow: "0 15px 30px rgba(0,0,0,0.1)"
+                        boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
                     }}
                     transition={{ type: "spring" as const, damping: 20 }}
                     >
-                        <Card className="border-coffee-200">
-                        <CardContent className="p-6">
-                            <motion.h3 
-                            initial={{ y: 20, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
+                    <Card className="border-amber-100 overflow-hidden">
+                        <CardContent className="p-0">
+                        <div className="p-6 bg-orange-100">
+                            <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            className="text-xl font-semibold text-coffee-900 mb-4">
-                                Why Visit Café Vista?
-                            </motion.h3>
-                    <ul className="space-y-3 text-coffee-600">
-                            {[
-                            "Premium ethically sourced coffee beans",
-                            "Fresh pastries baked daily on-site",
-                            "Cozy atmosphere perfect for work or relaxation",
-                            "Free Wi-Fi and ample seating",
-                            "Friendly, knowledgeable baristas"
-                            ].map((item, index) => (
-                            <motion.li 
-                                key={index}
-                                className="flex items-start space-x-2"
-                                initial={{ x: -30, opacity: 0 }}
-                                whileInView={{ x: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 * index }}
-                                whileHover={{ x: 10 }}
+                            transition={{ delay: 0.3, type: "spring" as const, damping: 15 }}
+                            className="text-center mb-4"
                             >
-                                <motion.span 
-                                className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0"
-                                animate={{ 
-                                    scale: [1, 1.2, 1],
-                                    opacity: [0.7, 1, 0.7]
-                                }}
-                                transition={{ 
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: index * 0.3
-                                }}
-                                />
-                                <span>{item}</span>
-                            </motion.li>
-                            ))}
-                        </ul>                           
+                            <MapPin className="w-12 h-12 text-amber-800
+                             mx-auto mb-3" />
+                            <h3 className="text-xl font-semibold 
+                            text-amber-950 mb-2">Find Us Easily</h3>
+                            <p className="text-amber-800 mb-4">Located in the heart of downtown, just 2 blocks from Central Station</p>
+                            </motion.div>
+                            
+                            {/* Google Maps Embed */}
+                            <div className="w-full h-64 rounded-lg 
+                            shadow-inner overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.0977!2d-74.00597!3d40.71278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316ca6b7b1%3A0x3c9b8d4e4f2b8d4e!2s123%20Coffee%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1639584921234!5m2!1sen!2sus"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Café Vista Location"
+                                className="rounded-lg"
+                            />
+                            </div>
+                        </div>
                         </CardContent>
-                        </Card>
-                        </motion.div>
+                    </Card>
                     </motion.div>
-                </motion.div>
-            </div>
-        </section>
-    )
-}
 
-export default Contact
+                    <motion.div
+              whileHover={{ 
+                scale: 1.02,
+                boxShadow: "0 15px 30px rgba(0,0,0,0.1)"
+              }}
+              transition={{ type: "spring" as const, damping: 20 }}
+            >
+              <Card className="border-amber-100">
+                <CardContent className="p-6">
+                  <motion.h3 
+                    className="text-xl font-semibold text-amber-950 mb-4"
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    Why Visit Café Vista?
+                  </motion.h3>
+                  <ul className="space-y-3 text-amber-800">
+                    {[
+                      "Premium ethically sourced coffee beans",
+                      "Fresh pastries baked daily on-site",
+                      "Cozy atmosphere perfect for work or relaxation",
+                      "Free Wi-Fi and ample seating",
+                      "Friendly, knowledgeable baristas"
+                    ].map((item, index) => (
+                      <motion.li 
+                        key={index}
+                        className="flex items-start space-x-2"
+                        initial={{ x: -30, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 * index }}
+                        whileHover={{ x: 10 }}
+                      >
+                        <motion.span 
+                          className="w-2 h-2 bg-amber-800 rounded-full 
+                          mt-2 flex-shrink-0"
+                          animate={{ 
+                            scale: [1, 1.2, 1],
+                            opacity: [0.7, 1, 0.7]
+                          }}
+                          transition={{ 
+                            duration: 2,
+                            repeat: Infinity,
+                            delay: index * 0.3
+                          }}
+                        />
+                        <span>{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+)
+}
+export default Contact;
