@@ -176,8 +176,8 @@ const Contact = () => {
                                 </motion.div>
                                 <div>
                                     <h3 className="font-semibold text-amber-950 mb-1">Email Us</h3>
-                                    <p className="text-amber-800">hello@cafevista.com</p>
-                                    <p className="text-amber-800">orders@cafevista.com</p>
+                                    <p className="text-amber-800">hello@dailybrew.com</p>
+                                    <p className="text-amber-800">orders@dailybrew.com</p>
                                 </div>
                                 </div>
                             </CardContent>
@@ -284,7 +284,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
                   >
-                    Why Visit Café Vista?
+                    Why Visit Daily Brew?
                   </motion.h3>
                   <ul className="space-y-3 text-amber-800">
                     {[

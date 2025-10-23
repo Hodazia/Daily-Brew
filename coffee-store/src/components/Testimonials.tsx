@@ -248,7 +248,7 @@ return (
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          Don't just take our word for it. Here's what our valued customers have to say about their Café Vista experience.
+          Don't just take our word for it. Here's what our valued customers have to say about their Daily Brew experience.
         </motion.p>
       </motion.div>
 

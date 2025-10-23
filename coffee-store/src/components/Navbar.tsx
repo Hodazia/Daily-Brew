@@ -143,9 +143,9 @@ const Navbar = () => {
               <motion.button
                 key={index}
                 onClick={item.action}
-                className="block w-full text-left px-3 py-2 text-amber-800
+                className="block w-full text-center px-3 py-2 text-amber-800
                  hover:text-amber-900 hover:bg-orange-100
-                 rounded-md transition-colors duration-200"
+                  transition-colors duration-200"
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: index * 0.05 }}

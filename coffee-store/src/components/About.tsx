@@ -5,9 +5,9 @@ const About = () => {
         <>
         <section id="about" className="bg-white p-20">
             <div className="max-w-7xl mx-auto p-6 md:p-4 lg:p-2">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/*Image in the first grid */}
-                    <div className="relative">
+                    <div className="relative ">
                         <img 
                         src={Aboutus}
                         alt="Cakes, pastries of cafes"

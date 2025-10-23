@@ -32,7 +32,7 @@ const FAQs = () => {
     {
       id: 4,
       question: "Do you have Wi-Fi for customers?",
-      answer: "Yes, we provide free high-speed Wi-Fi for all our customers. The network name is 'CafeVista_Guest' and the password is available at the counter. Perfect for remote work or studying!"
+      answer: "Yes, we provide free high-speed Wi-Fi for all our customers. The network name is 'DailyBrew_Guest' and the password is available at the counter. Perfect for remote work or studying!"
     },
     {
       id: 5,
@@ -47,7 +47,7 @@ const FAQs = () => {
     {
       id: 7,
       question: "Do you have a loyalty program?",
-      answer: "Yes! Our Café Vista Rewards program offers points for every purchase. Earn 1 point per dollar spent and get a free drink after 100 points. Sign up at the counter or through our mobile app."
+      answer: "Yes! Our Daily Brew Rewards program offers points for every purchase. Earn 1 point per dollar spent and get a free drink after 100 points. Sign up at the counter or through our mobile app."
     }
     ]
 
@@ -126,7 +126,7 @@ const FAQs = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
                 >
-                    Got questions? We've got answers! Find everything you need to know about Café Vista.
+                    Got questions? We've got answers! Find everything you need to know about Daily Brew.
                 </motion.p>
             </motion.div>
 
